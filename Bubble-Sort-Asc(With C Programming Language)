@@ -1,0 +1,25 @@
+int tamp;
+int sortBubbleAsc(int arr[],int stop){
+   for(int x=0;x<stop;x++){
+   	for(int y=0;y<stop;y++){
+          if(arr[y]>arr[y+1]){
+          	tamp=arr[y];
+            arr[y]=arr[y+1];
+				    arr[y+1]=tamp;
+          }
+      }
+   }
+   for(int z=0;z<stop;z++){
+      printf("%d",arr[z]);
+   }
+}
+
+
+int main(){
+	int angka[]={5,3,1,8,7,2};
+  int stop = sizeof(angka) / sizeof(*angka);
+  
+  sortBubbleAsc(angka,stop);
+
+getch();
+}
